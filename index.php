@@ -16,10 +16,9 @@ function getSum(string $str1, string $str2) {
 
     $carry = 0;
     $result = '';
-    for ($i = $maxLength - 1; $i >= 0; $i--) {
-        $j = $maxLength - $i;
-        $num1 = ($j <= $length1) ? $str1[$length1 - $j] : 0;
-        $num2 = ($j <= $length2) ? $str2[$length2 - $j] : 0;
+    for ($i = 1; $i <= $maxLength; $i++) {
+        $num1 = ($i <= $length1) ? $str1[$length1 - $i] : 0;
+        $num2 = ($i <= $length2) ? $str2[$length2 - $i] : 0;
 
         $sum = $num1 + $num2 + $carry;
 
